@@ -39,8 +39,8 @@ const LoadingScreen = () => {
   }, [currentLine]);
 
   return (
-    <div className="h-screen flex items-end justify-start z-50">
-      <div className="relative text-left font-mono text-lg p-4 rounded-t-lg w-96 mb-6 ml-6">
+    <div className="h-screen overflow-hidden flex items-end justify-start z-50">
+      <div className="relative text-left font-mono text-lg p-4 rounded-t-lg w-96 mb-20 ml-6">
         <h1 className="font-extrabold bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600 inline-block bg-clip-text text-transparent mb-3 text-3xl z-20">
           &lt;npmdev/&gt;
         </h1>
@@ -88,7 +88,7 @@ export default function App() {
       <div>
         <div data-aos="fade-up" data-aos-duration="1500" className="fixed inset-0 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
           <div className="selection:text-white cursor-crosshair selection:bg-orange-500 text-xl">
-            <h1 data-aos="fade-up" data-aos-duration="1500" className="fixed left-8 top-6 font-extrabold bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600 inline-block bg-clip-text text-transparent mb-3 text-3xl z-20">
+            <h1 data-aos="fade-up" data-aos-duration="1500" className="absolute lg:fixed left-6 top-4 font-extrabold bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600 inline-block bg-clip-text text-transparent mb-3 text-3xl z-20">
               &lt;npmdev/&gt;
             </h1>
             <div className="relative h-full w-full flex flex-col sm:flex-row">
