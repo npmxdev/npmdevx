@@ -71,14 +71,18 @@ const Contact = () => {
                 ></textarea>
             </div>
 
-            <button
-            type="submit"
-            className="flex mx-auto items-center justify-center gap-2 px-6 py-2 bg-orange-600 text-white font-medium rounded-lg shadow-md hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
-            >
-            <FaPaperPlane className="text-white" />
-            Send Message
-            </button>
-
+            <div className="relative flex items-center justify-center">
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-36 h-10 rounded-lg bg-orange-600 opacity-95 animate-ping"></div>
+              </div>
+              <button
+                type="submit"
+                className="relative flex mx-auto items-center justify-center gap-2 px-6 py-2 bg-orange-600 text-white font-medium rounded-lg shadow-md hover:bg-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+              >
+                <FaPaperPlane className="text-white" />
+                Send Message
+              </button>
+            </div>
         </form>
       </div>
     </section>

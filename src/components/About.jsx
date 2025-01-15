@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Prism from 'prismjs';
-import 'prismjs/themes/prism-tomorrow.css';
+import 'prismjs/themes/prism-okaidia.css';
 
 const About = () => {
   useEffect(() => {
@@ -15,20 +15,17 @@ const About = () => {
       className="w-full h-screen flex items-center justify-center"
     >
       <div className="w-full sm:w-3/4 lg:w-2/3 h-screen md:w-full flex flex-col items-start text-left px-8 py-12">
-        <h1 className="text-2xl font-extrabold mb-2 text-orange-500">/about_me</h1>
+        <h1 className="text-2xl font-extrabold mb-4 text-orange-500">/about_me</h1>
 
         <div className="w-full mb-6">
-            <p className="text-lg text-black leading-relaxed">
-            Hello World! I’m a fresh graduate with a Bachelor’s degree in Information Technology from the Philippines.
-            </p>
-            <p className="text-lg text-black leading-relaxed mt-1">
-            I have a strong interest in web development, software engineering, and exploring new technologies. I’m
-            passionate about building efficient and user-friendly applications that solve real-world problems.
-            </p>
+          <p className="md:text-base text-sm text-black leading-relaxed">
+            <span className='ml-6'></span>Hey there! 👋 I’m a fresh graduate with a <span className="font-bold text-blue-500">Bachelor’s degree in Information Technology</span> from the Philippines 🇵🇭.
+            I’m deeply passionate about <span className="font-bold text-green-500">web development</span> and <span className="font-bold text-orange-500">software engineering</span>. I love diving into new technologies and using them to create <span className="font-bold text-yellow-500">innovative solutions</span>. My goal is to build <span className="font-bold text-red-500">efficient</span>, <span className="font-bold text-teal-500">user-friendly</span> applications that make a real difference in the world.
+          </p>
         </div>
 
-        <div className="w-full mb-2 transition-all duration-300 hover:scale-105">
-          <pre style={{ fontSize: '1rem', lineHeight: '1.2rem' }} className="text-xs bg-gray-900 p-2 rounded-md font-mono">
+        <div className="md:w-3/4 w-full mx-auto mb-2 transition-all duration-300 hover:scale-105">
+          <pre style={{ fontSize: '1rem', lineHeight: '1.2rem' }} className="bg-gray-900 p-2 rounded-md font-mono">
             <code className="language-javascript">
               {`const npmdev = {
   name: 'Nur-hamin P. Mustapha',

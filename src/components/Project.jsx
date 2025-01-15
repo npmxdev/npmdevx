@@ -23,8 +23,8 @@ const Project = () => {
                 alt="Hollywood Sign on The Hill" />
             </a>
             <div className="p-6">
-              <h5 className="mb-2 text-xl font-medium leading-tight">Card title</h5>
-              <p className="mb-4 text-base">
+              <h5 className="mb-2 text-xl text-orange-600 font-medium leading-tight">Card title</h5>
+              <p className="mb-4 text-base text-orange-500">
                 This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
               </p>
               <a 
