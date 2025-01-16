@@ -12,7 +12,6 @@ const Contact = () => {
           /contact_me
         </h1>
         <form className="space-y-4">
-          {/* First and Last Name */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex items-center border border-orange-300 rounded-lg">
               <FaUser className="text-orange-500 mx-2" />
@@ -36,7 +35,6 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Email and Phone */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="flex items-center border border-orange-300 rounded-lg">
                 <FaEnvelope className="text-orange-500 mx-2" />

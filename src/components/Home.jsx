@@ -9,14 +9,14 @@ const Home = () => {
       <div className="w-full sm:w-3/4 lg:w-2/3 md:w-full flex flex-col items-center justify-center text-center px-4">
         <div className="flex flex-col sm:flex-row items-center justify-center mb-2">
           <img
-            src="assets/npm-DtnH3aJs.jpg"
+            src="src/assets/npm.jpg"
             alt="Nur-hamin P. Mustapha"
             className="shadow-md rounded-full w-48 h-48 md:w-48 md:h-48 md:mr-4 mt-2 md:ml-16"
           />
           <div className="text-start md:text-start md:ml-4">
-            <p className="text-sm text-gray-700 font-semibold">Hi there!👋 I'm</p>
+            <p className="text-sm dark:text-white text-gray-700 font-semibold">Hi there!👋 I'm</p>
             <h1 className="text-3xl sm:text-md md:text-5xl font-bold text-orange-500">Nur-hamin Mustapha</h1>
-              <p className="text-sm text-start mt-4">Technologies I have worked with:</p>
+              <p className="text-sm dark:text-white text-start mt-4">Technologies I have worked with:</p>
               <div className="mt-4 flex badges flex-wrap lg:mr-16 justify-center gap-2">
                 <img
                   src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white"
@@ -93,15 +93,15 @@ const Home = () => {
         </div>
 
         <div className="mb-4 max-w-3xl">
-        <p className="text-sm md:text-base flex justify-between text-black leading-relaxed">
-        I’m a tech enthusiast who loves building websites that run smoothly and look great 🌟 (and yes, sometimes I accidentally break them... but hey, that’s part of the fun!). When I’m not squashing bugs 🐛💥, you’ll find me diving into new tech 📚, enjoying a cup of coffee ☕, playing music 🎸🎹 or pretending to understand some complex algorithms 🤓. "Not quite a coding wizard yet, but definitely the sidekick you need 💻. Need someone who's quick to learn, faster to think, and always brings a smile to the project? Let’s team up! 🙌"
+        <p className="text-sm md:text-base flex justify-between dark:text-white text-black leading-relaxed">
+        I’m a tech enthusiast who loves building websites that run smoothly and look great 🌟 (and yes, sometimes I accidentally break them... but hey, that’s part of the fun!). When I’m not squashing bugs 🐛💥, you’ll find me diving into new tech 📚, enjoying a cup of coffee ☕, playing music 🎸🎹 or pretending to understand some complex algorithms 🤓. Not quite a coding wizard yet, but definitely the sidekick you need 💻. Need someone who's quick to learn, faster to think, and always brings a smile to the project? Let’s team up! 🙌
         </p>
         </div>
-        <div className="github-chart mb-4 p-4">
+        <div className="github-chart mb-4 p-4 text-black dark:text-white">
             <a href="https://github.com/npmxdev/" target="_blank" className="text-start h-5"><img src="https://ghchart.rshah.org/npmxdev" alt="npmdev's Github chart" /></a>
         </div>
         <div className='rounded-full border-2 border-slate-400 px-2'>
-            <a href="#about" className='animate-pulse'><FontAwesomeIcon icon={faArrowDown} /></a>
+            <a href="#about" className='dark:text-white animate-pulse'><FontAwesomeIcon icon={faArrowDown} /></a>
         </div>
       </div>
     </section>

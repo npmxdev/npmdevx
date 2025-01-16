@@ -8,6 +8,7 @@ import About from './components/About';
 import Project from './components/Project';
 import Certification from './components/Certification';
 import Contact from './components/Contact';
+import Header from './components/Header';
 
 const LoadingScreen = () => {
   const [text, setText] = useState("");
@@ -85,12 +86,9 @@ export default function App() {
         <LoadingScreen />
       ) : (
       <div>
-        <div data-aos="fade-up" data-aos-duration="1500" className="fixed inset-0 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
-          <div className="selection:text-white cursor-crosshair selection:bg-orange-500 text-xl">
-            <a href="npmdevx.vercel.app">
-            <h1 data-aos="fade-up" data-aos-duration="1500" className="absolute lg:fixed left-6 top-4 font-extrabold bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600 inline-block bg-clip-text text-transparent mb-3 text-xl md:text-3xl z-20">
-              &lt;npmdev/&gt;
-            </h1></a>
+        <div className="fixed inset-0 h-full w-full transition-colors duration-500 ease-in-out dark:bg-gray-800 dark:bg-[radial-gradient(#1e3a8a_1px,transparent_1px)] dark:text-white bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
+          <div data-aos="fade-up" data-aos-duration="1500" className="selection:text-white cursor-crosshair selection:bg-orange-500 text-xl">
+            <Header />
             <div className="relative h-full w-full flex flex-col sm:flex-row">
               <Sidebar />
               <div className="w-full flex flex-col justify-center overflow-hidden">
