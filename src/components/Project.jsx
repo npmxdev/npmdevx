@@ -14,17 +14,17 @@ const Project = () => {
         </div>
 
         <div className="grid grid-cols-1">
-          <div data-aos="fade-right" data-aos-duration="1500" className="mx-3 sm:w-auto mt-6 flex flex-col sm:flex-row rounded-lg dark:border-gray-700 border-2 dark:bg-gray-800 bg-white shadow-lg dark:bg-surface-dark dark:text-white transition-all transform hover:scale-105 hover:shadow-2xl duration-300">
+          <div data-aos="fade-right" data-aos-duration="1500" className="mx-3 sm:w-auto h-96 mt-6 flex flex-col sm:flex-row rounded-lg dark:border-gray-700 border-2 dark:bg-gray-800 bg-white shadow-lg dark:bg-surface-dark dark:text-white transition-all transform hover:scale-105 hover:shadow-2xl duration-300">
             <div>
               <a href="#!">
                 <img
-                  className="rounded-l-lg sm:h-full right-0"
+                  className="rounded-l-lg scale-75 sm:h-full right-0"
                   src="demo1.png"
                   alt="mafarims"
                 />
               </a>
             </div>
-            <div className="p-6 justify-between flex flex-col sm:w-1/3 h-full dark:bg-gray-800">
+            <div className="p-6 md:absolute bg-white justify-between flex flex-col sm:w-1/3 h-full dark:bg-gray-800">
               <h5 className="mb-2 text-2xl font-extrabold leading-tight text-orange-500 transition-colors duration-300">mafarims.tech</h5>
               <p className="mb-4 text-base dark:text-white text-gray-600">
                 A comprehensive inventory management system for MAFAR, focused on motorpool and agricultural supplies.
