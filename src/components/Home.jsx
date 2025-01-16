@@ -9,7 +9,7 @@ const Home = () => {
       <div className="w-full sm:w-3/4 lg:w-2/3 md:w-full flex flex-col items-center justify-center text-center px-4">
         <div className="flex flex-col sm:flex-row items-center justify-center mb-2">
           <img
-            src="public/npm.jpg"
+            src="npm.jpg"
             alt="Nur-hamin P. Mustapha"
             className="shadow-md rounded-full w-48 h-48 md:w-48 md:h-48 md:mr-4 mt-2 md:ml-16"
           />

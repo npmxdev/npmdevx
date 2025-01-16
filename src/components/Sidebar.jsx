@@ -3,18 +3,16 @@ const Sidebar = () => {
     <section
       data-aos="fade-up"
       data-aos-duration="1500"
-      className="fixed w-full bottom-0 left-0 sm:left-1/2 md:left-40 lg:left-1/3 transform -translate-x-1/2 mb-4 lg:w-1/3 max-w-md  bg-white/70 backdrop-blur-xl shadow-lg rounded-full flex justify-around items-center py-1 z-50 border border-gray-200"
+      className="fixed w-full bottom-0 left-0 sm:left-1/2 md:left-40 lg:left-1/3 transform -translate-x-1/2 mb-4 lg:w-1/3 max-w-md  bg-orange-50/30 backdrop-blur-xl shadow-lg rounded-full flex justify-around items-center py-1 z-50 border border-gray-200"
     >
-
-      {/* Navigation items */}
-      <ul className="flex justify-around w-full text-sm font-medium text-orange-500 bg-transparent">
+      <ul className="flex justify-around w-full text-sm font-medium dark:text-blue-900 text-orange-500 bg-transparent">
         <li>
           <a
             href="#home"
             className="flex flex-col text-orange-500 group p-3 w-16 h-16 rounded-full justify-center items-center transition-all duration-300"
           >
             <svg
-              className="w-6 h-6 text-orange-500 group-hover:text-orange-500 transition-colors"
+              className="w-6 h-6  group-hover:text-orange-500 transition-colors"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"

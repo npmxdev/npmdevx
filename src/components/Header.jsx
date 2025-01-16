@@ -15,7 +15,6 @@ const Header = () => {
 
   return (
     <div>
-      {/* Header Title */}
       <a href="https://npmdevx.vercel.app">
         <h1
           data-aos="fade-up"
@@ -25,8 +24,6 @@ const Header = () => {
           &lt;npmdev/&gt;
         </h1>
       </a>
-
-      {/* Dark Mode Toggle */}
       <div
         data-aos="fade-up"
         data-aos-duration="1500"

@@ -86,8 +86,8 @@ export default function App() {
         <LoadingScreen />
       ) : (
       <div>
-        <div className="fixed inset-0 h-full w-full transition-colors duration-500 ease-in-out dark:bg-gray-800 dark:bg-[radial-gradient(#1e3a8a_1px,transparent_1px)] dark:text-white bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
-          <div data-aos="fade-up" data-aos-duration="1500" className="selection:text-white cursor-crosshair selection:bg-orange-500 text-xl">
+        <div data-aos="fade-up" data-aos-duration="1500" className="fixed inset-0 h-full w-full transition-colors duration-500 ease-in-out dark:bg-gray-800 dark:bg-[radial-gradient(#1e3a8a_1px,transparent_1px)] dark:text-white bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
+          <div className="selection:text-white cursor-crosshair selection:bg-orange-500 text-xl">
             <Header />
             <div className="relative h-full w-full flex flex-col sm:flex-row">
               <Sidebar />

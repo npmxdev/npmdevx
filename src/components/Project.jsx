@@ -19,7 +19,7 @@ const Project = () => {
               <a href="#!">
                 <img
                   className="rounded-l-lg sm:h-full right-0"
-                  src="public/demo1.png"
+                  src="demo1.png"
                   alt="mafarims"
                 />
               </a>
@@ -44,7 +44,7 @@ const Project = () => {
               <a href="#!">
                 <img
                   className="rounded-l-lg sm:h-full right-0"
-                  src="public/demo1.png"
+                  src="demo1.png"
                   alt="mafarims"
                 />  
               </a>
@@ -71,7 +71,7 @@ const Project = () => {
               <a href="#!">
                 <img
                   className="rounded-l-lg sm:h-full right-0"
-                  src="public/demo1.png"
+                  src="demo1.png"
                   alt="mafarims"
                 />
               </a>
