@@ -27,7 +27,7 @@ const Header = () => {
       <div
         data-aos="fade-up"
         data-aos-duration="1500"
-        className="fixed right-10 top-6 z-30"
+        className="absolute lg:fixed right-10 top-6 z-30"
       >
         <label className="relative inline-flex items-center cursor-pointer">
           <input

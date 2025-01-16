@@ -25,7 +25,7 @@ const About = () => {
         </div>
 
         <div className="md:w-3/4 w-full mx-auto mb-2 transition-all duration-300 hover:scale-105">
-          <pre style={{ fontSize: '0.9rem', lineHeight: '1.2rem' }} className="bg-gray-900 p-2 rounded-md font-mono">
+          <pre style={{ fontSize: '0.9rem', lineHeight: '1.2rem' }} className="bg-gray-600 p-2 rounded-md font-mono">
             <code className="language-javascript">
               {`const npmdev = {
   name: 'Nur-hamin P. Mustapha',
