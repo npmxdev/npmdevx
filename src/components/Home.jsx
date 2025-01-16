@@ -15,8 +15,8 @@ const Home = () => {
           />
           <div className="text-start md:text-start md:ml-4">
             <p className="text-sm dark:text-white text-gray-700 font-semibold">Hi there!👋 I'm</p>
-            <h1 className="text-3xl sm:text-md md:text-5xl font-bold text-orange-500">Nur-hamin Mustapha</h1>
-              <p className="text-sm dark:text-white text-start mt-4">Technologies I have worked with:</p>
+            <h1 className="text-3xl sm:text-md md:text-5xl font-extrabold font-sans bg-gradient-to-r from-orange-500 via-orange-400 to-orange-600 inline-block bg-clip-text text-transparent">Nur-hamin Mustapha</h1>
+              <p className="text-sm dark:text-white text-start mt-2">Technologies I have worked with:</p>
               <div className="mt-4 flex badges flex-wrap lg:mr-16 justify-center gap-2">
                 <img
                   src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white"

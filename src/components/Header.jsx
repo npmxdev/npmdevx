@@ -19,7 +19,7 @@ const Header = () => {
         <h1
           data-aos="fade-up"
           data-aos-duration="1500"
-          className="absolute lg:fixed left-6 top-4 font-extrabold bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 inline-block bg-clip-text text-transparent mb-3 text-xl md:text-3xl z-20"
+          className="absolute lg:fixed left-6 md:top-4 top-6 font-extrabold bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 inline-block bg-clip-text text-transparent mb-3 text-xl md:text-3xl z-20"
         >
           &lt;npmdev/&gt;
         </h1>
