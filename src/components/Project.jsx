@@ -1,6 +1,96 @@
-import { FaLink } from 'react-icons/fa'; // Importing FontAwesome icon
+import React, { useState } from "react";
+
+const Option = ({ image, mainText, subText, isActive, onClick, repoLink, liveLink, techStack }) => {
+  return (
+    <div
+      className={`overflow-hidden relative flex-1 min-w-[60px] mx-2 my-2 cursor-pointer transition-transform duration-500 ease-in-out rounded-xl ${
+        isActive ? "flex-grow-[10000] scale-100 max-w-[600px]" : ""
+      }`}
+      onClick={onClick}
+      style={{ backgroundImage: `url(${image})`, backgroundSize: "auto 120%", backgroundPosition: "center" }}
+    >
+      <div
+        className="absolute inset-0 bottom-0 h-full rounded-xl"
+        style={{
+          backgroundImage: "linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0))",
+        }}
+      ></div>
+
+      <div
+        className={`absolute bottom-0 left-0 right-0 h-[120px] transition-shadow duration-500 ease-in-out ${
+          isActive
+            ? "shadow-inset shadow-black shadow-[0_-120px_120px_-120px]"
+            : "shadow-inset shadow-black shadow-[0_-120px_0px_-120px]"
+        }`}
+      ></div>
+      <div className="absolute bottom-4 left-4 flex items-center">
+        <div className="ml-2 text-white">
+          <div className="font-bold text-xl">{mainText}</div>
+          <div className="opacity-90 text-sm">{subText}</div>
+          <div className="mt-2 text-xs text-gray-400">
+            <span className="font-semibold">Tech Stack:</span> {techStack.join(", ")}
+          </div>
+          <div className="mt-4 space-x-2">
+            <a
+              href={repoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-white text-sm text-white p-1 rounded-full hover:bg-white hover:text-black transition-colors"
+            >
+              Repository
+            </a>
+            <a
+              href={liveLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-white text-sm text-white p-1 rounded-full hover:bg-white hover:text-black transition-colors"
+            >
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const Project = () => {
+  const [activeOption, setActiveOption] = useState(null);
+
+  const options = [
+    {
+      image: "/mafarimsLanding.png",
+      icon: "fa-database",
+      mainText: "MAFARIMS",
+      subText: "A comprehensive system for managing agricultural resources in the BARMM region.",
+      repoLink: "https://github.com/npmxdev/mafarims",
+      liveLink: "https://mafarims.infinityfreeapp.com/",
+      techStack: ["PHP", "Tailwind CSS", "MySQL", "JavaScript"],
+    },
+    {
+      image: "/npmdevLanding.png",
+      icon: "fa-cogs",
+      mainText: "NPMDEV",
+      subText: "A development environment for managing npm packages efficiently with real-time updates.",
+      repoLink: "https://github.com/npmxdev/npmdev",
+      liveLink: "https://npmdevx.vercel.app/",
+      techStack: ["React", "Tailwind CSS", "AOS"],
+    },
+    {
+      image: "/marvelcodexLanding.png",
+      icon: "fa-brain",
+      mainText: "MARVEL CODEX",
+      subText: "An interactive catalog of Marvel Universe characters and lore, with search and filters.",
+      repoLink: "https://github.com/npmxdev/marvelcodex",
+      liveLink: "https://marvelcodex.vercel.app",
+      techStack: ["React", "Tailwind CSS", "Marvel API Integration"],
+    },
+  ];
+
+  const handleOptionClick = (index) => {
+    setActiveOption(index === activeOption ? null : index);
+  };
+
   return (
     <section
       data-aos="fade-up"
@@ -8,90 +98,21 @@ const Project = () => {
       id="projects"
       className="w-full flex flex-col items-center mt-36 md:mt-12 justify-center"
     >
-      <div className="w-full sm:w-3/4 lg:w-2/3 md:w-full flex flex-col items-start text-left px-8 py-12">
-        <div className="md:w-1/3 text-left mb-4 md:mb-0">
-          <h1 className="text-2xl font-extrabold text-orange-500">/my_projects</h1>
-        </div>
-
-        <div className="grid grid-cols-1">
-          <div data-aos="fade-right" data-aos-duration="1500" className="mx-3 sm:w-auto h-96 mt-6 flex flex-col sm:flex-row rounded-lg dark:border-gray-700 border-2 dark:bg-gray-800 bg-white shadow-lg dark:bg-surface-dark dark:text-white transition-all transform hover:scale-105 hover:shadow-2xl duration-300">
-            <div>
-              <a href="#!">
-                <img
-                  className="rounded-l-lg scale-75 sm:h-full right-0"
-                  src="demo1.png"
-                  alt="mafarims"
-                />
-              </a>
-            </div>
-            <div className="p-6 md:absolute bg-white justify-between flex flex-col sm:w-1/3 h-full dark:bg-gray-800">
-              <h5 className="mb-2 text-2xl font-extrabold leading-tight text-orange-500 transition-colors duration-300">mafarims.tech</h5>
-              <p className="mb-4 text-base dark:text-white text-gray-600">
-                A comprehensive inventory management system for MAFAR, focused on motorpool and agricultural supplies.
-              </p>
-              <a 
-                href="https://github.com/yourusername/project1" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="items-center text-center p-2 text-orange-500 rounded-full hover:text-orange-700"
-              >
-                <FaLink className="mr-2" />
-              </a>
-            </div>
-          </div>
-          <div data-aos="fade-left" data-aos-duration="1500" className="mx-3 sm:w-auto mt-6 flex flex-col sm:flex-row rounded-lg dark:border-gray-700 border-2 dark:bg-gray-800 bg-white shadow-lg dark:bg-surface-dark dark:text-white transition-all transform hover:scale-105 hover:shadow-2xl duration-300">
-            <div>
-              <a href="#!">
-                <img
-                  className="rounded-l-lg sm:h-full right-0"
-                  src="demo1.png"
-                  alt="mafarims"
-                />  
-              </a>
-            </div>
-
-            <div className="p-6 justify-between flex flex-col sm:w-1/3 h-full dark:bg-gray-800">
-              <h5 className="mb-2 text-2xl font-extrabold leading-tight text-orange-500 transition-colors duration-300">mafarims.tech</h5>
-              <p className="mb-4 text-base dark:text-white text-gray-600">
-                A comprehensive inventory management system for MAFAR, focused on motorpool and agricultural supplies.
-              </p>
-              <a 
-                href="https://github.com/yourusername/project1" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="items-center text-center p-2 text-orange-500 rounded-full hover:text-orange-700"
-              >
-                <FaLink className="mr-2" />
-              </a>
-            </div>
-          </div>
-
-          <div data-aos="fade-right" data-aos-duration="1500" className="mx-3 sm:w-auto mt-6 flex flex-col sm:flex-row rounded-lg dark:border-gray-700 border-2 dark:bg-gray-800 bg-white shadow-lg dark:bg-surface-dark dark:text-white transition-all transform hover:scale-105 hover:shadow-2xl duration-300">
-            <div>
-              <a href="#!">
-                <img
-                  className="rounded-l-lg sm:h-full right-0"
-                  src="demo1.png"
-                  alt="mafarims"
-                />
-              </a>
-            </div>
-            <div className="p-6 justify-between flex flex-col sm:w-1/3 h-full dark:bg-gray-800">
-              <h5 className="mb-2 text-2xl font-extrabold leading-tight text-orange-500 transition-colors duration-300">mafarims.tech</h5>
-              <p className="mb-4 text-base dark:text-white text-gray-600">
-                A comprehensive inventory management system for MAFAR, focused on motorpool and agricultural supplies.
-              </p>
-              <a 
-                href="https://github.com/yourusername/project1" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="items-center text-center p-2 text-orange-500 rounded-full hover:text-orange-700"
-              >
-                <FaLink className="mr-2" />
-              </a>
-            </div>
-          </div>
-        </div>
+      <div className="flex items-stretch overflow-hidden min-w-[600px] max-w-[900px] w-[calc(100%-100px)] h-[400px]">
+        {options.map((option, index) => (
+          <Option
+            key={index}
+            image={option.image}
+            icon={option.icon}
+            mainText={option.mainText}
+            subText={option.subText}
+            isActive={activeOption === index}
+            onClick={() => handleOptionClick(index)}
+            repoLink={option.repoLink}
+            liveLink={option.liveLink}
+            techStack={option.techStack}
+          />
+        ))}
       </div>
     </section>
   );
