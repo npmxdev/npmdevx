@@ -6,7 +6,6 @@ import Sidebar from './components/Sidebar';
 import Home from './components/Home';
 import About from './components/About';
 import Project from './components/Project';
-import Certification from './components/Certification';
 import Contact from './components/Contact';
 import Header from './components/Header';
 
@@ -40,7 +39,7 @@ const LoadingScreen = () => {
   }, [currentLine]);
 
   return (
-    <div className="absolute bottom-0 items-end justify-start z-50">
+    <div className="selection:text-white cursor-crosshair selection:bg-orange-500 absolute bottom-0 items-end justify-start z-50">
       <div className="relative text-left font-mono text-lg p-4 rounded-t-lg w-96 mb-20 ml-2 md:ml-6">
         <h1 className="font-extrabold bg-gradient-to-r from-orange-600 via-orange-500 to-orange-600 inline-block bg-clip-text text-transparent mb-3 text-3xl z-20">
           &lt;npmdev/&gt;
@@ -95,7 +94,6 @@ export default function App() {
                 <Home />
                 <About />
                 <Project />
-                <Certification />
                 <Contact />
               </div>
             </div>

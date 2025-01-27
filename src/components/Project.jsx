@@ -61,7 +61,7 @@ const Project = () => {
     {
       image: "/mafarimsLanding.png",
       icon: "fa-database",
-      mainText: "MAFARIMS",
+      mainText: "mafarims",
       subText: "A comprehensive system for managing agricultural resources in the BARMM region.",
       repoLink: "https://github.com/npmxdev/mafarims",
       liveLink: "https://mafarims.infinityfreeapp.com/",
@@ -70,7 +70,7 @@ const Project = () => {
     {
       image: "/npmdevLanding.png",
       icon: "fa-cogs",
-      mainText: "NPMDEV",
+      mainText: "npmdev",
       subText: "A development environment for managing npm packages efficiently with real-time updates.",
       repoLink: "https://github.com/npmxdev/npmdev",
       liveLink: "https://npmdevx.vercel.app/",
@@ -79,11 +79,20 @@ const Project = () => {
     {
       image: "/marvelcodexLanding.png",
       icon: "fa-brain",
-      mainText: "MARVEL CODEX",
+      mainText: "Marvel Codex",
       subText: "An interactive catalog of Marvel Universe characters and lore, with search and filters.",
       repoLink: "https://github.com/npmxdev/marvelcodex",
       liveLink: "https://marvelcodex.vercel.app",
       techStack: ["React", "Tailwind CSS", "Marvel API Integration"],
+    },
+    {
+      image: "/sumitupLanding.png",
+      icon: "fa-brain",
+      mainText: "LetsSumItUp",
+      subText: "An interactive catalog of Marvel Universe characters and lore, with search and filters.",
+      repoLink: "https://github.com/npmxdev/sumitup",
+      liveLink: "https://letssumitup.vercel.app",
+      techStack: ["React", "Tailwind CSS", "Rapid API Integration", "OpenAI GPT-4"],
     },
   ];
 
@@ -98,6 +107,8 @@ const Project = () => {
       id="projects"
       className="w-full flex flex-col items-center mt-36 md:mt-12 justify-center"
     >
+      <h1 className="text-2xl text-start font-extrabold mb-4 text-orange-500">/my_projects</h1>
+
       <div className="flex items-stretch overflow-hidden min-w-[600px] max-w-[900px] w-[calc(100%-100px)] h-[400px]">
         {options.map((option, index) => (
           <Option
