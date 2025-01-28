@@ -8,10 +8,10 @@ const Contact = () => {
         className="w-full h-screen flex items-center justify-center py-10"
     >
       <div className="w-full sm:w-3/4 lg:w-2/3 md:w-full mx-4 p-8 rounded-lg">
-        <h1 className="text-2xl font-extrabold text-orange-500 mb-4">
+        <h1 className="text-2xl font-extrabold text-orange-500 mb-8">
           /contact_me
         </h1>
-        <form className="space-y-4">
+        <form className="space-y-4 w-3/4 justify- items-center mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="flex items-center border bg-white border-orange-300 rounded-lg">
               <FaUser className="text-orange-500 mx-2" />
