@@ -1,13 +1,15 @@
-import React, { useState, useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-import './App.css'
-import Sidebar from './components/Sidebar';
-import Home from './components/Home';
-import About from './components/About';
-import Project from './components/Project';
-import Contact from './components/Contact';
-import Header from './components/Header';
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "./App.css";
+import Sidebar from "./components/Sidebar";
+import Home from "./components/Home";
+import About from "./components/About";
+import Project from "./components/Project";
+import Contact from "./components/Contact";
+import Header from "./components/Header";
+
+import { MdKeyboardCommandKey } from "react-icons/md";
 
 const LoadingScreen = () => {
   const [text, setText] = useState("");
@@ -68,14 +70,14 @@ export default function App() {
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 4100);
-    return() => clearTimeout(timer);
-  },[]);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     AOS.init({
       offset: 200,
       duration: 600,
-      easing: 'ease-in-sine',
+      easing: "ease-in-sine",
       delay: 100,
     });
   }, []);
@@ -84,12 +86,21 @@ export default function App() {
       {isLoading ? (
         <LoadingScreen />
       ) : (
-      <div>
-        <div data-aos="fade-up" data-aos-duration="1500" className="fixed inset-0 h-full w-full transition-colors duration-500 ease-in-out dark:bg-gray-800 dark:bg-[radial-gradient(#1e3a8a_1px,transparent_1px)] dark:text-white bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="1500"
+            className="fixed inset-0 h-full w-full transition-colors duration-500 ease-in-out dark:bg-gray-800 dark:bg-[radial-gradient(#1e3a8a_1px,transparent_1px)] dark:text-white bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]"
+          ></div>
           <div className="selection:text-white cursor-crosshair selection:bg-orange-500 text-xl">
             <Header />
             <div className="relative h-full w-full flex flex-col sm:flex-row">
               <Sidebar />
+              <div className="lg:flex fixed hidden bottom-5 right-5 text-sm group text-orange-600 items-center animate-pulse font-bold">
+                Press
+                <MdKeyboardCommandKey className="text-gray-700 font-bold cursor-pointer mx-1" />
+                + K to learn more about me.
+              </div>
               <div className="w-full flex flex-col justify-center overflow-hidden">
                 <Home />
                 <About />

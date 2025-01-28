@@ -24,6 +24,7 @@ const Header = () => {
           &lt;npmdev/&gt;
         </h1>
       </a>
+      
       <div
         data-aos="fade-up"
         data-aos-duration="1500"
