@@ -96,9 +96,9 @@ export default function App() {
             <Header />
             <div className="relative h-full w-full flex flex-col sm:flex-row">
               <Sidebar />
-              <div className="lg:flex fixed hidden bottom-5 right-5 text-sm group text-orange-600 items-center animate-pulse font-bold">
+              <div className="lg:flex fixed hidden bottom-5 z-40 right-5 text-sm group text-orange-600 items-center animate-pulse font-bold">
                 Press
-                <MdKeyboardCommandKey className="text-gray-700 font-bold cursor-pointer mx-1" />
+                <MdKeyboardCommandKey className="dark:text-white text-xl text-gray-700 font-bold cursor-pointer mx-1" />
                 + K to learn more about me.
               </div>
               <div className="w-full flex flex-col justify-center overflow-hidden">

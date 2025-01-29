@@ -103,10 +103,12 @@ const Contact = () => {
 
   return (
     <section
+      data-aos="fade-up"
+      data-aos-duration="1500"
       id="contact"
       className="w-full h-screen flex flex-col items-center justify-center"
     >
-      <div className="w-full text-sm sm:w-3/4 lg:w-2/3 md:w-ful mx-4 bg-white dark:bg-gray-800 border p-4 rounded-lg text-orange-500">
+      <div className="w-full text-sm sm:w-3/4 lg:w-2/3 md:w-ful mx-4 bg-white dark:bg-gray-800 border border-orange-500 p-4 rounded-lg text-orange-500">
         <div className="flex flex-col items-start space-y-4 h-80 ">
           <div className="space-x-2 relative top-0 flex">
             <div className="flex justify-center items-center">
