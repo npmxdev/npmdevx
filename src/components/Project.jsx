@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa6";
 const Option = ({ image, mainText, subText, repoLink, liveLink, techStack }) => {
   return (
     <div data-aos="fade-up"
-    data-aos-duration="1500" className="group mx-4 relative p-2 dark:bg-gray-800 bg-white border-2 my-2 border-transparent rounded-lg cursor-pointer transition-all duration-150 ease-in-out hover:shadow-[10px_10px_0_#fbbf24,20px_20px_0_#f97316] border-orange-500 md:hover:-translate-x-2 md:hover:-translate-y-2">
+    data-aos-duration="1500" className="border-2 border-orange-500 group mx-4 relative p-2 dark:bg-gray-800 bg-white my-2 rounded-lg cursor-pointer transition-all duration-150 ease-in-out hover:shadow-[10px_10px_0_#fbbf24,20px_20px_0_#f97316] md:hover:-translate-x-2 md:hover:-translate-y-2">
       <div
         className="w-full h-[250px] bg-gray-500 rounded-lg"
         style={{ backgroundImage: `url(${image})`, backgroundSize: "contain", backgroundPosition: "center" }}
