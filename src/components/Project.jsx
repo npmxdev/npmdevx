@@ -1,20 +1,33 @@
+import { FaGithub } from "react-icons/fa6";
+
 
 const Option = ({ image, mainText, subText, repoLink, liveLink, techStack }) => {
   return (
-    <div className="relative p-2 border-gray-300 bg-white border-2 my-2 border-transparent rounded-lg cursor-pointer transition-all duration-150 ease-in-out hover:shadow-[10px_10px_0_#4e84ff,20px_20px_0_#4444bd] hover:border-[#0578c5] hover:-translate-x-5 hover:-translate-y-5 active:shadow-none active:translate-x-0 active:translate-y-0">
+    <div className=" mx-4 relative p-2 border-gray-300 bg-white border-2 my-2 border-transparent rounded-lg cursor-pointer transition-all duration-150 ease-in-out hover:shadow-[10px_10px_0_#fbbf24,20px_20px_0_#f97316] md:hover:border-orange-500 md:hover:-translate-x-2 md:hover:-translate-y-2">
       <div
-        className="w-full h-[170px] bg-gray-500 rounded-lg"
-        style={{ backgroundImage: `url(${image})`, backgroundSize: "cover", backgroundPosition: "center" }}
+        className="w-full h-[250px] bg-gray-500 rounded-lg"
+        style={{ backgroundImage: `url(${image})`, backgroundSize: "contain", backgroundPosition: "center" }}
       ></div>
       <div className="p-4 flex flex-col gap-4">
         <h2 className="text-2xl font-semibold text-black truncate">{mainText}</h2>
         <p className="text-sm text-gray-600 truncate">{subText}</p>
         <div className="flex justify-between items-center">
-          <span className="bg-[#b2b2fd] text-[#1a41cd] font-bold py-1 px-3 rounded-2xl text-xs tracking-tight">
+          <span className="bg-orange-200 text-gray-500 font-bold py-1 px-3 rounded-2xl text-xs tracking-tight">
             {techStack.join(", ")}
           </span>
-          <div onClick={window.open({liveLink})} className="w-12 h-12 flex items-center justify-center bg-[#a6c2f0] rounded-full transition-transform duration-300 hover:rotate-[-45deg]">
-            🚀
+          <div className="flex items-center gap-2">
+            <div 
+              onClick={() => window.open(liveLink, "_blank")} 
+              className="w-12 h-12 flex items-center justify-center bg-orange-200 rounded-full transition-transform duration-300 hover:rotate-[-45deg] cursor-pointer"
+            >
+              🚀
+            </div>
+            <div 
+              onClick={() => window.open(repoLink, "_blank")} 
+              className="w-12 h-12 flex items-center justify-center bg-orange-200 text-white rounded-full transition-transform duration-300 hover:scale-110 cursor-pointer"
+            > 
+              <FaGithub className="text-black h-8"/>
+            </div>
           </div>
         </div>
       </div>
@@ -66,7 +79,7 @@ const Project = () => {
       className="w-full flex flex-col items-center mt-36 md:mt-12 justify-center"
     >
       <h1 className="text-2xl text-start font-extrabold mb-4 text-orange-500">/my_projects</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-5xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 mx-12 w-full max-w-5xl">
         {options.map((option, index) => (
           <Option
             key={index}
