@@ -1,52 +1,20 @@
-import React, { useState } from "react";
 
-const Option = ({ image, mainText, subText, isActive, onClick, repoLink, liveLink, techStack }) => {
+const Option = ({ image, mainText, subText, repoLink, liveLink, techStack }) => {
   return (
-    <div
-      className={`overflow-hidden relative flex-1 min-w-[60px] mx-2 my-2 cursor-pointer transition-transform duration-500 ease-in-out rounded-xl ${
-        isActive ? "flex-grow-[10000] scale-100 max-w-[600px]" : ""
-      }`}
-      onClick={onClick}
-      style={{ backgroundImage: `url(${image})`, backgroundSize: "auto 120%", backgroundPosition: "center" }}
-    >
+    <div className="relative p-2 border-gray-300 bg-white border-2 my-2 border-transparent rounded-lg cursor-pointer transition-all duration-150 ease-in-out hover:shadow-[10px_10px_0_#4e84ff,20px_20px_0_#4444bd] hover:border-[#0578c5] hover:-translate-x-5 hover:-translate-y-5 active:shadow-none active:translate-x-0 active:translate-y-0">
       <div
-        className="absolute inset-0 bottom-0 h-full rounded-xl"
-        style={{
-          backgroundImage: "linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0))",
-        }}
+        className="w-full h-[170px] bg-gray-500 rounded-lg"
+        style={{ backgroundImage: `url(${image})`, backgroundSize: "cover", backgroundPosition: "center" }}
       ></div>
-
-      <div
-        className={`absolute bottom-0 left-0 right-0 h-[120px] transition-shadow duration-500 ease-in-out ${
-          isActive
-            ? "shadow-inset shadow-black shadow-[0_-120px_120px_-120px]"
-            : "shadow-inset shadow-black shadow-[0_-120px_0px_-120px]"
-        }`}
-      ></div>
-      <div className="absolute bottom-4 left-4 flex items-center">
-        <div className="ml-2 text-white">
-          <div className="font-bold text-xl">{mainText}</div>
-          <div className="opacity-90 text-sm">{subText}</div>
-          <div className="mt-2 text-xs text-gray-400">
-            <span className="font-semibold">Tech Stack:</span> {techStack.join(", ")}
-          </div>
-          <div className="mt-4 space-x-2">
-            <a
-              href={repoLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border border-white text-sm text-white p-1 rounded-full hover:bg-white hover:text-black transition-colors"
-            >
-              Repository
-            </a>
-            <a
-              href={liveLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border border-white text-sm text-white p-1 rounded-full hover:bg-white hover:text-black transition-colors"
-            >
-              Live Demo
-            </a>
+      <div className="p-4 flex flex-col gap-4">
+        <h2 className="text-2xl font-semibold text-black truncate">{mainText}</h2>
+        <p className="text-sm text-gray-600 truncate">{subText}</p>
+        <div className="flex justify-between items-center">
+          <span className="bg-[#b2b2fd] text-[#1a41cd] font-bold py-1 px-3 rounded-2xl text-xs tracking-tight">
+            {techStack.join(", ")}
+          </span>
+          <div onClick={window.open({liveLink})} className="w-12 h-12 flex items-center justify-center bg-[#a6c2f0] rounded-full transition-transform duration-300 hover:rotate-[-45deg]">
+            🚀
           </div>
         </div>
       </div>
@@ -55,12 +23,9 @@ const Option = ({ image, mainText, subText, isActive, onClick, repoLink, liveLin
 };
 
 const Project = () => {
-  const [activeOption, setActiveOption] = useState(null);
-
   const options = [
     {
       image: "/mafarimsLanding.png",
-      icon: "fa-database",
       mainText: "mafarims",
       subText: "A comprehensive system for managing agricultural resources in the BARMM region.",
       repoLink: "https://github.com/npmxdev/mafarims",
@@ -69,7 +34,6 @@ const Project = () => {
     },
     {
       image: "/npmdevLanding.png",
-      icon: "fa-cogs",
       mainText: "npmdev",
       subText: "A development environment for managing npm packages efficiently with real-time updates.",
       repoLink: "https://github.com/npmxdev/npmdev",
@@ -78,7 +42,6 @@ const Project = () => {
     },
     {
       image: "/marvelcodexLanding.png",
-      icon: "fa-brain",
       mainText: "Marvel Codex",
       subText: "An interactive catalog of Marvel Universe characters and lore, with search and filters.",
       repoLink: "https://github.com/npmxdev/marvelcodex",
@@ -87,7 +50,6 @@ const Project = () => {
     },
     {
       image: "/sumitupLanding.png",
-      icon: "fa-brain",
       mainText: "LetsSumItUp",
       subText: "An interactive catalog of Marvel Universe characters and lore, with search and filters.",
       repoLink: "https://github.com/npmxdev/sumitup",
@@ -95,10 +57,6 @@ const Project = () => {
       techStack: ["React", "Tailwind CSS", "Rapid API Integration", "OpenAI GPT-4"],
     },
   ];
-
-  const handleOptionClick = (index) => {
-    setActiveOption(index === activeOption ? null : index);
-  };
 
   return (
     <section
@@ -108,17 +66,13 @@ const Project = () => {
       className="w-full flex flex-col items-center mt-36 md:mt-12 justify-center"
     >
       <h1 className="text-2xl text-start font-extrabold mb-4 text-orange-500">/my_projects</h1>
-
-      <div className="flex items-stretch overflow-hidden min-w-[600px] max-w-[900px] w-[calc(100%-100px)] h-[400px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-5xl">
         {options.map((option, index) => (
           <Option
             key={index}
             image={option.image}
-            icon={option.icon}
             mainText={option.mainText}
             subText={option.subText}
-            isActive={activeOption === index}
-            onClick={() => handleOptionClick(index)}
             repoLink={option.repoLink}
             liveLink={option.liveLink}
             techStack={option.techStack}
