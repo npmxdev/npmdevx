@@ -11,7 +11,7 @@ const Option = ({ image, mainText, subText, repoLink, liveLink, techStack }) => 
       ></div>
       <div className="p-4 flex flex-col gap-4">
         <h2 className="text-2xl font-extrabold text-orange-500 truncate">{mainText}</h2>
-        <p className="text-sm  dark:text-gray-200 text-gray-600 truncate group-hover:text-wrap">{subText}</p>
+        <p className="text-sm text-justify dark:text-gray-200 text-gray-600 truncate group-hover:text-wrap">{subText}</p>
         <div className="flex justify-between items-center">
           <span className="bg-orange-200 text-gray-500 font-bold py-1 px-3 rounded-2xl w-3/5 text-xs tracking-tight">
             {techStack.join(", ")}
