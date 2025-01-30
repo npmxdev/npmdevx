@@ -15,7 +15,7 @@ const Sidebar = () => {
             href="#home"
             className="flex flex-col items-center justify-center w-full transition-all hover:scale-150 ease-out duration-300"
           >
-            <TbSmartHome className="w-6 h-6"/>
+            <TbSmartHome className="w-6 h-6 animate-floating"/>
           </a>
           <div className="absolute bottom-0 right-24 transform translate-x-full hidden group-hover:flex transition-opacity duration-300 bg-orange-500 text-white text-xs rounded py-1 px-2">
             Home
@@ -26,7 +26,7 @@ const Sidebar = () => {
             href="#about"
             className="flex flex-col items-center justify-center w-full transition-all hover:scale-150 ease-out duration-300"
           >
-            <MdOutlineShortText className="w-6 h-6"/>
+            <MdOutlineShortText className="w-6 h-6 animate-floating"/>
           </a>
           <div className="absolute bottom-0 right-24 transform translate-x-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-orange-500 text-white text-xs rounded py-1 px-2">
             About
@@ -37,7 +37,7 @@ const Sidebar = () => {
             href="#projects"
             className="flex flex-col items-center justify-center w-full transition-all hover:scale-150 ease-out duration-300"
           >
-            <GrProjects className="w-4 h-4"/>
+            <GrProjects className="w-4 h-4 animate-floating"/>
           </a>
           <div className="absolute bottom-0 right-24 transform translate-x-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-orange-500 text-white text-xs rounded py-1 px-2">
             Projects
@@ -48,7 +48,7 @@ const Sidebar = () => {
             href="#contact"
             className="flex flex-col items-center justify-center w-full transition-all hover:scale-150 ease-out duration-300"
           >
-            <MdAlternateEmail className="w-6 h-6"/>
+            <MdAlternateEmail className="w-6 h-6 animate-floating"/>
           </a>
           <div className="absolute bottom-0 right-24 transform translate-x-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-orange-500 text-white text-xs rounded py-1 px-2">
             Contact
