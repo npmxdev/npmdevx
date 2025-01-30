@@ -9,7 +9,7 @@ const Sidebar = () => {
       data-aos-duration="1500"
       className="fixed my-auto h-full left-24 justify-center items-center z-50 flex-col hidden lg:flex"
     >
-      <ul className="flex px-4 bg-white rounded-full shadow-lg border-r py-6 border-gray-200 flex-col items-center justify-start space-y-6 w-full text-sm font-extrabold dark:text-blue-900 text-orange-500 bg-transparent">
+      <ul className="flex transition-all duration-300 px-4 bg-white rounded-full shadow-lg border-r pt-6 pb-2 border-gray-200 flex-col items-center justify-start space-y-6 w-full text-sm font-extrabold dark:text-blue-900 text-orange-500 bg-transparent">
         <li className="relative group">
           <a
             href="#home"
